@@ -1,0 +1,71 @@
+
+/*------css for sidebar-----*/
+.sidebar{
+    grid-area: sidebar;
+    background-color: var(--color-primary-private);
+    color: var(--color-text);
+    width: 170px;
+    transition: width 0.4s ease;
+    height: 100vh;
+
+}
+
+.sidebar_collapsed{
+    grid-area: sidebar;
+    background-color: var(--color-primary-private);
+    color: var(--color-text);
+    width: 60px;
+    transition: width 0.4s ease;
+    height: 100vh;
+}
+.menu {
+    padding-top: 100px;
+    
+}
+
+.menu_item_text_none{
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+
+}
+
+.menu_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 25px;
+    padding-left: 15px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+.menu_item:hover{
+    background-color:var(--color-secondary-private);
+    cursor: pointer;
+    height: 25px;
+}
+
+.menu_item_text{
+    padding-left: 10px;
+    opacity: 1;
+    transition: opacity 0.10s ease; 
+}
+/*css for navbar*/
+
+.navbar{
+    grid-area: navbar;
+    background-color: var(--color-primary-private);
+    color: var(--color-text);
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu_navbar{
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+@media (max-width: 800px) {
+    
+
+
+}
