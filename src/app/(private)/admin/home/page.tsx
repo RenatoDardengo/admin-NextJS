@@ -8,6 +8,7 @@ interface ThemeState {
   } 
 
 export default function Home() {
+  const [collapse, setCollapse] = useState(true);
     const localStorageKey = 'lightMode';
     const [lightMode, setLightMode] = useState<boolean>(() => {
         if (typeof window !== 'undefined') {
@@ -25,12 +26,15 @@ export default function Home() {
         setLightMode(newMode);
         localStorage.setItem(localStorageKey, newMode.toString());
       };
+      const handleCollapse = () => {
+        setCollapse(!collapse);
+    };
 
   return (
     <span className={`${style.container} ${lightMode ? 'light_mode' : 'dark_mode'}`}>
-        <Navbar toggleLightMode={toggleLightMode} lightMode={lightMode}/>
-        <Sidebar/>
-        <div>Content</div>
+        <Navbar toggleLightMode={toggleLightMode} lightMode={lightMode} onCollapse={handleCollapse}/>
+        <Sidebar collapsed={collapse}/>
+        <div className={style.content}> Container</div>
     </span>
         
    

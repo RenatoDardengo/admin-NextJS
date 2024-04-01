@@ -20,7 +20,9 @@
 }
 .menu {
     padding-top: 100px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .menu_item_text_none{
@@ -36,7 +38,7 @@
     height: 25px;
     padding-left: 15px;
     transition: background-color 0.3s ease;
-    position: relative;
+
 }
 .menu_item:hover{
     background-color:var(--color-secondary-private);
@@ -65,7 +67,25 @@
 }
 
 @media (max-width: 800px) {
+    .menu{
+        flex-direction: row;
+        padding-top: 5px;
+    }
+    .sidebar{
+        
+        transition: width 0.4s ease;
+        height: 50px;
+        width: 100%;
+        border-top: 1px var(--color-text) solid;
     
+    }
+    .sidebar_collapsed{
+        transition: width 0.4s ease;
+        height: 50px;
+        width: 100%;
+        border-top: 1px var(--color-text) solid;
+    }
+
 
 
 }
