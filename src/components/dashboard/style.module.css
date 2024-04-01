@@ -11,10 +11,10 @@
 }
 
 .sidebar_collapsed{
-    grid-area: sidebar;
+    display: none;
+   grid-area: sidebar;
     background-color: var(--color-primary-private);
     color: var(--color-text);
-    width: 60px;
     transition: width 0.4s ease;
     height: 100vh;
 }
@@ -40,6 +40,10 @@
     transition: background-color 0.3s ease;
 
 }
+.selected_item  {
+
+    background-color: var(--color-secondary-private); /* Example suggestion */
+  }
 .menu_item:hover{
     background-color:var(--color-secondary-private);
     cursor: pointer;
@@ -70,6 +74,7 @@
     .menu{
         flex-direction: row;
         padding-top: 5px;
+        justify-content:space-around;
     }
     .sidebar{
         
@@ -80,11 +85,22 @@
     
     }
     .sidebar_collapsed{
+        display: block;
         transition: width 0.4s ease;
         height: 50px;
         width: 100%;
         border-top: 1px var(--color-text) solid;
     }
+    .menu_item_text{
+        display: none;
+        margin-right: 10px;
+    }
+    .menu_item{
+        padding: 5px 15px;
+
+        border-radius: 20px;
+    }
+
 
 
 

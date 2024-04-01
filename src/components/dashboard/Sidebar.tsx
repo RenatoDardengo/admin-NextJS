@@ -1,31 +1,38 @@
-import React from 'react';
+'use client'
+import React, {useState} from 'react';
 import style from './style.module.css';
 import { Home, UserRound, ShoppingCart, NotebookPen } from 'lucide-react';
 import { SidbarProps } from '@/types';
 
 export default function Sidebar({ collapsed }: SidbarProps) {
+  const [selectedItem, setSelectedItem] = useState('');
+
+  const handleItemClick = (itemName:string) => {
+    setSelectedItem(itemName);
+  };
+
   return (
    <span className={` ${collapsed ? style.sidebar : style.sidebar_collapsed}`} >
 
 <div className={style.menu}>
-        <div className={style.menu_item} >
-          <div><Home /></div>
-          <span className={`${collapsed ? style.menu_item_text : style.menu_item_text_none}`}> Inicio</span>
+<div className={`${style.menu_item} ${selectedItem === 'inicio' ? style.selected_item : ''}`} onClick={() => handleItemClick('inicio')}>
+          <div><Home /> </div>
+          <span className={ style.menu_item_text}> Inicio</span>
 
         </div>
-        <div className={style.menu_item} >
+        <div className={`${style.menu_item} ${selectedItem === 'usuario' ? style.selected_item : ''}`} onClick={() => handleItemClick('usuario')}>
           <div><UserRound /></div>
-          <span className={`${collapsed ? style.menu_item_text : style.menu_item_text_none}`}> Usuário</span>
+          <span className={ style.menu_item_text }> Usuário</span>
 
         </div>
-        <div className={style.menu_item} >
+        <div className={`${style.menu_item} ${selectedItem === 'produtos' ? style.selected_item : ''}`} onClick={() => handleItemClick('produtos')}>
           <div><ShoppingCart /></div>
-          <span className={`${collapsed ? style.menu_item_text : style.menu_item_text_none}`}> Produtos</span>
+          <span className={ style.menu_item_text }> Produtos</span>
 
         </div>
-        <div className={style.menu_item} >
+        <div className={`${style.menu_item} ${selectedItem === 'publicacoes' ? style.selected_item : ''}`} onClick={() => handleItemClick('publicacoes')}>
           <div><NotebookPen /></div>
-          <span className={`${collapsed ? style.menu_item_text : style.menu_item_text_none}`}> Publicações</span>
+          <span className={ style.menu_item_text }> Publicações</span>
         </div>
       </div>
    </span>
