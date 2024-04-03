@@ -42,8 +42,10 @@
 }
 .selected_item  {
 
-    background-color: var(--color-secondary-private); /* Example suggestion */
+    color:var(--color-gren-1-private);; /* Example suggestion */
+    border-left: 2px solid var(--color-gren-1-private);
   }
+ 
 .menu_item:hover{
     background-color:var(--color-secondary-private);
     cursor: pointer;
@@ -97,8 +99,18 @@
     }
     .menu_item{
         padding: 5px 15px;
-
+        border-left: none;
         border-radius: 20px;
+    }
+    .selected_item  {
+
+        background-color:var(--color-gren-1-private);; /* Example suggestion */
+        color: var(--color-text);
+
+      }
+      .menu_item:hover{
+        background-color:var(--color-gren-1-private);
+
     }
 
 

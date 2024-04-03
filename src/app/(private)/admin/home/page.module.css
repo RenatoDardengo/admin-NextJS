@@ -3,6 +3,7 @@
     grid-template-areas: "sidebar navbar" "sidebar content";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
+    height: 100vh;
 
 }
 
@@ -10,7 +11,7 @@
     grid-area: content;
     background-color: var(--color-secondary-private);
     color: var(--color-text);
-    height: 100vh;
+    height: 100%;
 }
 
 @media (max-width: 800px) {

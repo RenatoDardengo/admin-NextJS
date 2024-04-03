@@ -3,15 +3,18 @@ body {
     font-size: 17px;
 }
 :root{
-    --color-primary-private:rgb(15, 23, 42);
-    --color-secondary-private:rgb(75 85 99);
+   --color-primary-private:rgb(32,40,55);
+   --color-secondary-private:rgb(16, 24, 36);
+   --color-gren-1-private:rgb(16,186,127);
+    --color-secondary-slate1:#bec6cf;
     --color-primary-public: #E23030;
-    --color-text:#F8F8F8;
+    --color-text:rgb(199,213,222);
 }
 
 .light_mode{
-    --color-primary-private:rgb(161,161,170);
-    --color-secondary-private:rgb(241 245 249);
+    --color-primary-private: rgb(203 213 225);
+    --color-secondary-private:#F0F5F9;
+    --color-gren-1-private:#3498DB;
     --color-primary-public: #E23030;
-    --color-text:rgb(24,24,27);
+    --color-text:#333333;
 }

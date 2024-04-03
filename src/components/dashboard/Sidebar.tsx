@@ -4,11 +4,12 @@ import style from './style.module.css';
 import { Home, UserRound, ShoppingCart, NotebookPen } from 'lucide-react';
 import { SidbarProps } from '@/types';
 
-export default function Sidebar({ collapsed }: SidbarProps) {
+export default function Sidebar({ collapsed, onItemClick }: SidbarProps) {
   const [selectedItem, setSelectedItem] = useState('');
 
   const handleItemClick = (itemName:string) => {
     setSelectedItem(itemName);
+    onItemClick(itemName);
   };
 
   return (
@@ -20,7 +21,7 @@ export default function Sidebar({ collapsed }: SidbarProps) {
           <span className={ style.menu_item_text}> Inicio</span>
 
         </div>
-        <div className={`${style.menu_item} ${selectedItem === 'usuario' ? style.selected_item : ''}`} onClick={() => handleItemClick('usuario')}>
+        <div className={`${style.menu_item} ${selectedItem === 'users' ? style.selected_item : ''}`} onClick={() => handleItemClick('users')}>
           <div><UserRound /></div>
           <span className={ style.menu_item_text }> Usuário</span>
 

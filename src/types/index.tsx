@@ -1,5 +1,6 @@
 export type SidbarProps={
     collapsed: boolean;
+    onItemClick: (menuItem: string) => void;
   }
 
   export type  NavbarProps ={
