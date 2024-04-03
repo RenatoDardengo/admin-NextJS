@@ -19,6 +19,8 @@
         grid-template-areas:"navbar" "sidebar"  "content";
         grid-template-columns: 1fr;
     }
-
+.content{
+    height: 100vh;
+}
 
 }
