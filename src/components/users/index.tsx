@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './style.module.css';
 import { Trash2,FilePenLine } from 'lucide-react';
+import ButtonCustom from '../Custom/Button';
+import InputTextCustom from '../Custom/InputText';
 interface user {
     id:number;
     name: string;
@@ -21,7 +23,12 @@ export default function Users() {
     <section className={style.container}>
         <span> Cadastro de usuários</span>
         <span>
-            <div className={style.section_options}> Botões de pesquisa</div>
+            <div className={style.section_options}>
+                <InputTextCustom height={34} placeholder={"Pesquisar"}/>
+                <ButtonCustom label="Cadastrar" className="btn_primary"/>
+                <ButtonCustom label="Editar" className="btn_secondary"/>
+                <ButtonCustom label="Excluir" className="btn_danger"/>
+            </div>
             <div className={style.section_table}>
             <div className={style.table_container}>
                 <table className={style.table}>

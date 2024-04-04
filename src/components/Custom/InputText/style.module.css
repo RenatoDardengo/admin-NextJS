@@ -1,0 +1,16 @@
+.input_text {
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color-text) ;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--color-btn-danger);
+    color: var(--color-text);
+    
+
+}
+
+.input_text:focus {
+    border-color: var(--color-btn-primary);
+    outline: none;
+    box-shadow: 0 0 10px rgba(var(--color-btn-secondary), 0.6);
+}

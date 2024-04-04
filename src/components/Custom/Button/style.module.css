@@ -4,6 +4,8 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    height: 40px;
+    
 }
 
 .btn_default {
@@ -11,12 +13,12 @@
     color: #333;
 }
 .btn_primary {
-    background-color:var(--color-gren-1-private);
+    background-color:var(--color-btn-primary);
     color: var(--color-text)
 }
 .btn_secondary {
-    background-color: #6c757d;
-    color: #fff;
+    background-color: var(--color-btn-secondary);
+    color: var(--color-text)
 }
 
 /* Estilo para botões de sucesso */
@@ -27,8 +29,9 @@
 
 /* Estilo para botões de perigo */
 .btn_danger {
-    background-color: #dc3545;
-    color: #fff;
+    background-color: var(--color-btn-danger);
+    color: var(--color-text);
+    border: 1px solid var(--color-text) ;
 }
 
 /* Estilo para botões de aviso */

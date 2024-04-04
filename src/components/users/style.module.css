@@ -3,8 +3,14 @@
 }
 
 .section_options{
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--color-primary-private);
     margin-top: 10px;
+    padding-top: 15px;
+    height: 60px;
+    justify-content: space-between;
+    
 }
 
 .section_table{
