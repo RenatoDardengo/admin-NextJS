@@ -3,6 +3,7 @@ import style from './style.module.css';
 import { Trash2,FilePenLine } from 'lucide-react';
 import ButtonCustom from '../Custom/Button';
 import InputTextCustom from '../Custom/InputText';
+import SelectCustom from '../Custom/Select';
 interface user {
     id:number;
     name: string;
@@ -24,10 +25,18 @@ export default function Users() {
         <span> Cadastro de usuários</span>
         <span>
             <div className={style.section_options}>
+                <div className={style.input_container}>
                 <InputTextCustom height={34} placeholder={"Pesquisar"}/>
+                <SelectCustom height={34} options={[{value:'nome', label:"Nome"},{value:'telefone', label:'telefone'} ]}
+                 placeholder='critério de pesquisa'/>
+
+                </div>
+                <div className={style.button_container}>
                 <ButtonCustom label="Cadastrar" className="btn_primary"/>
-                <ButtonCustom label="Editar" className="btn_secondary"/>
-                <ButtonCustom label="Excluir" className="btn_danger"/>
+                <ButtonCustom label="Pesquisar" className="btn_secondary"/>
+                <ButtonCustom label="Restaurar" className="btn_danger"/>
+
+                </div>
             </div>
             <div className={style.section_table}>
             <div className={style.table_container}>

@@ -92,3 +92,14 @@
 .margin_top {
     margin-top: 20px;
 }
+
+.btn_danger :focus{
+    border-color: var(--color-btn-primary);
+    outline: none;
+    box-shadow: 0 0 10px rgba(var(--color-btn-secondary), 0.6);
+}
+.btn_primary .btn_secondary :focus{
+    border-color: var(--color-text);
+    outline: none;
+    box-shadow: 0 0 10px rgba(var(--color-btn-secondary), 0.6);
+}
