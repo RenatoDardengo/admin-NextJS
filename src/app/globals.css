@@ -10,14 +10,16 @@ body {
    --color-btn-secondary:rgb(3,121,88);
    --color-btn-danger:rgb(56,65,82);
     --color-secondary-slate1:#bec6cf;
-    --color-primary-public: #E23030;
     --color-text:rgb(199,213,222);
 }
 
 .light_mode{
-    --color-primary-private: rgb(203 213 225);
-    --color-secondary-private:#F0F5F9;
-    --color-gren-1-private:#3498DB;
-    --color-primary-public: #E23030;
-    --color-text:#333333;
+    --color-primary-private: #bac5c7;
+    --color-secondary-private: #F0F5F9;
+    --color-gren-1-private: rgb(0, 64, 127); /* Cor ajustada */
+    --color-btn-secondary: #84a1c1; /* Cor ajustada */
+    --color-btn-primary: #4472a0; /* Mantida igual */
+    --color-btn-danger: #d8dce0; /* Mantida igual */
+    --color-secondary-slate1: #bec6cf; /* Mantida igual */
+    --color-text: #384655;
 }

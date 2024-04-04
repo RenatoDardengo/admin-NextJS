@@ -38,6 +38,7 @@
     height: 25px;
     padding-left: 15px;
     transition: background-color 0.3s ease;
+    margin-left: 1px;
 
 }
 .selected_item  {
@@ -77,6 +78,7 @@
         flex-direction: row;
         padding-top: 5px;
         justify-content:space-around;
+        margin-left: 5px;
     }
     .sidebar{
         
