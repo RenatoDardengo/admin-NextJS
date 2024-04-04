@@ -15,9 +15,9 @@ interface user {
 
 export default function Users() {
     var userss:user[] = new Array(
-        {id:1, name: "João", level: 20, phoneNumber:22222, jobTitle:"adm" },
-        {id:1, name: "João", level: 20, phoneNumber:22222, jobTitle:"adm" },
-        {id:1, name: "João", level: 20, phoneNumber:22222, jobTitle:"adm" },
+        {id:1, name: "João", level: 0, phoneNumber:22222, jobTitle:"adm" },
+        {id:2, name: "Maria", level: 1, phoneNumber:22222, jobTitle:"adm" },
+        {id:2, name: "José", level: 2, phoneNumber:22222, jobTitle:"adm" },
 
       );
   return (
@@ -27,7 +27,7 @@ export default function Users() {
             <div className={style.section_options}>
                 <div className={style.input_container}>
                 <InputTextCustom height={34} placeholder={"Pesquisar"}/>
-                <SelectCustom height={34} options={[{value:'nome', label:"Nome"},{value:'telefone', label:'telefone'} ]}
+                <SelectCustom height={38} options={[{value:'nome', label:"Nome"},{value:'telefone', label:'telefone'} ]}
                  placeholder='critério de pesquisa'/>
 
                 </div>
@@ -69,9 +69,9 @@ export default function Users() {
                                 <td className={style.th_hide}>
                                     {user.jobTitle}
                                 </td>
-                                <td className={`${style.table_img} ${style.last_column}`} >
+                                <td className={style.table_img}  >
                                     <FilePenLine/>
-                                    <Trash2/>
+                                    <Trash2 />
                                 </td>
                             </tr>)) : (<tr>
                                 <td colSpan={6}>Nenhum usuário encontrado!</td>
